@@ -12,12 +12,12 @@ orders_df = spark.read.format("csv").option("header", "false").load(hdfs_path_st
 order_items_df = spark.read.format("csv").option("header", "false").load(hdfs_path_starting + "order_items" + hdfs_path_finishing)
 products_df = spark.read.format("csv").option("header", "false").load(hdfs_path_starting + "products" + hdfs_path_finishing)
 
-# customers_df.printSchema()
-# departments_df.printSchema()
-# categories_df.printSchema()
-# # orders_df.printSchema()
-# order_items_df.printSchema()
-# products_df.printSchema()
+customers_df.printSchema()
+departments_df.printSchema()
+categories_df.printSchema()
+orders_df.printSchema()
+order_items_df.printSchema()
+products_df.printSchema()
 
 
 """
@@ -55,7 +55,7 @@ result.show()
 
 products_df.createOrReplaceTempView("products")
 
-query = """
+query3 = """
     SELECT
     o._c1 AS order_date,
     p._c0 AS Product_id,
@@ -67,7 +67,7 @@ query = """
     GROUP BY o._c1, p._c0, p._c2
     ORDER BY o._c1, p._c0
 """
-result = spark.sql(query)
+result = spark.sql(query3)
 
 result.show()
 
