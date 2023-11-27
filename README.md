@@ -17,7 +17,12 @@ First of all we're going to import data from HDFS to Hive, HiveQL is Hive’s qu
 - Get Average Revenue Per Order
 - Get Average Revenue Per Day Per Product
 
-## Part ll : Spark SQL and PySpark
+## part ll : PowerBI
+- (In Progress)
+## Part lll : Spark SQL and PySpark
+- (In Progress)
+
+
 - 📫 Feel free to contact me if anything is wrong or if anything needs to be changed 😎!  **medhajjari9@gmail.com**
 
 <a href="https://colab.research.google.com/github/heisenberghj7/Retail-Store-BigData/" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
